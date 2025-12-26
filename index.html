@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Brinks Global Services - Track Shipment</title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="apple-touch-icon" href="assets/logo.png">
+    <link rel="icon" sizes="32x32" href="assets/logo.png">
+    <link rel="icon" sizes="16x16" href="assets/logo.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <!-- In all HTML files, update the navbar section -->
+<header class="navbar">
+    <div class="nav-left">
+        <img src="assets/logo.png" alt="Brand Logo" class="logo">
+        <span class="brand-name">BRINKS GLOBAL SERVICES</span>
+    </div>
+
+    
+    <nav class="nav-right" id="navMenu">
+        
+        <a href="index.html">Track Shipment</a>
+        <a href="about.html">About</a>
+        <a href="support.html">Help & Support</a>
+    </nav>
+</header>
+
+    <!-- MAIN CONTENT -->
+    <main class="page fade-in">
+
+        <!-- TOKEN INPUT SECTION -->
+<section class="token-section">
+    <h1>Track Your Gold Shipment</h1>
+    <p>Enter your secure tracking token below.</p>
+
+    <div class="token-input-group">
+        <input type="text" id="tokenInput" placeholder="Enter tracking token" />
+        <button id="validateBtn">Validate Token</button>
+    </div>
+
+    <span id="tokenValid" class="token-valid">✔ Token Valid</span>
+    
+    <!-- TRACK BUTTON (hidden initially) -->
+    <button id="trackBtn" class="track-btn hidden">Track Shipment</button>
+</section>
+
+<!-- NEW HORIZONTAL ROADMAP SECTION -->
+<section class="roadmap-section hidden" id="roadmapSection">
+    <h2>Shipment Tracking</h2>
+    <p class="roadmap-subtitle">Live tracking your gold shipment</p>
+    
+    <div class="roadmap-container">
+        <div class="roadmap-line"></div>
+        
+        <div class="roadmap-nodes-wrapper">
+            <!-- Only 3 Roadmap Nodes -->
+            <div class="roadmap-node" data-status="processed">
+                <div class="node-circle">
+                    <div class="node-pulse"></div>
+                </div>
+                <div class="node-label">Processed</div>
+            </div>
+            
+            <div class="roadmap-node" data-status="in-transit">
+                <div class="node-circle">
+                    <div class="node-pulse"></div>
+                </div>
+                <div class="node-label">In Transit</div>
+            </div>
+            
+            <div class="roadmap-node" data-status="delivered">
+                <div class="node-circle">
+                    <div class="node-pulse"></div>
+                </div>
+                <div class="node-label">Delivered</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Tracking Info Panel -->
+    <div class="tracking-info">
+        <div class="info-card">
+            <h3>Current Status</h3>
+            <p class="current-status" id="currentStatus">Validating...</p>
+        </div>
+        <div class="info-card">
+            <h3>Sending From</h3>
+            <p class="route-from">Antwerp, Belgium</p>
+            <br>
+            <h3>Destination</h3>
+            <p class="route-to">Rochelle, Illinois, USA</p>
+        </div>
+        <div class="info-card">
+            <h3>Security Level</h3>
+            <p class="security-level">Maximum</p>
+        </div>
+    </div>
+</section>
+
+        <!-- SHIPMENT STATUS -->
+        <section class="status-section hidden" id="statusSection">
+            <h2>Shipment Status</h2>
+
+            <div class="status-timeline">
+                <div class="status-step" data-status="Processing">Processed</div>
+                <div class="status-step" data-status="In Transit">In Transit</div>
+                <div class="status-step" data-status="Delivered">Delivered</div>
+            </div>
+        </section>
+
+        
+
+    </main>
+
+    <!-- TOAST NOTIFICATION -->
+    <div id="toast" class="toast">Shipment status updated</div>
+
+    <!-- JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>

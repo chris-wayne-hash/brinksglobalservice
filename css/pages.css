@@ -1,0 +1,558 @@
+/* PAGE LAYOUT */
+.page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.page-container h1 {
+    color: var(--gold);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.page-subtitle {
+    color: var(--gray);
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+}
+
+.content-section {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.content-section h2 {
+    color: var(--gold);
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+/* FAQ Section heading */
+.faq-section h2 {
+    color: var(--gold);
+}
+
+.content-section p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* FEATURES */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.feature {
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.feature:hover {
+    transform: translateY(-8px) scale(1.05);
+    background: rgba(201, 162, 77, 0.15);
+    box-shadow: 0 10px 30px rgba(201, 162, 77, 0.2);
+    animation: featurePulse 0.6s ease;
+}
+
+.feature h3 {
+    color: var(--light);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+/* Pulse animation for feature cards */
+@keyframes featurePulse {
+    0% {
+        box-shadow: 0 10px 30px rgba(201, 162, 77, 0.2);
+    }
+    50% {
+        box-shadow: 0 10px 40px rgba(201, 162, 77, 0.4);
+    }
+    100% {
+        box-shadow: 0 10px 30px rgba(201, 162, 77, 0.2);
+    }
+}
+
+/* SHIPMENTS PAGE */
+.shipments-container {
+    display: grid;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.shipment-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.shipment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.status-badge {
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.status-in-transit {
+    background: rgba(201, 162, 77, 0.2);
+    color: var(--gold);
+    border: 1px solid var(--gold);
+}
+
+.status-processing {
+    background: rgba(66, 133, 244, 0.2);
+    color: #4285f4;
+    border: 1px solid #4285f4;
+}
+
+.status-delivered {
+    background: rgba(76, 175, 80, 0.2);
+    color: #4caf50;
+    border: 1px solid #4caf50;
+}
+
+.shipment-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.shipment-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.btn-track, .btn-details, .btn-primary, .btn-secondary {
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all var(--transition);
+    font-weight: 500;
+}
+
+.btn-track {
+    background: var(--gold);
+    color: var(--dark);
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-details {
+    background: transparent;
+    color: var(--light);
+    border: 1px solid var(--gray);
+}
+
+.btn-primary {
+    background: var(--gold);
+    color: var(--dark);
+    border: none;
+    padding: 0.8rem 2rem;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--light);
+    border: 1px solid var(--gray);
+    padding: 0.8rem 2rem;
+}
+
+.btn-track:hover, .btn-primary:hover {
+    background: #b8943a;
+}
+
+.btn-details:hover, .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.section-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+/* INSURANCE PAGE */
+.insurance-hero {
+    background: rgba(201, 162, 77, 0.1);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.insurance-plans {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.plan-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 2rem;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.plan-recommended {
+    border: 2px solid var(--gold);
+    transform: scale(1.05);
+}
+
+.plan-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--gold);
+    color: var(--dark);
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.plan-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.plan-price {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--gold);
+}
+
+.plan-price small {
+    font-size: 0.8rem;
+    display: block;
+    color: var(--gray);
+}
+
+.plan-features {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.plan-features li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.plan-features li:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 0.6rem;
+    height: 0.6rem;
+}
+
+.plan-features li:nth-child(-n+3):before {
+    background: var(--gold);
+}
+
+.plan-features li:nth-child(n+4):before {
+    background: var(--gray);
+}
+
+.btn-plan {
+    width: 100%;
+    padding: 0.8rem;
+    background: transparent;
+    color: var(--light);
+    border: 1px solid var(--gray);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all var(--transition);
+}
+
+.btn-gold {
+    background: var(--gold);
+    color: var(--dark);
+    border: none;
+}
+
+.btn-plan:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.btn-gold:hover {
+    background: #b8943a;
+}
+
+/* INSURANCE CALCULATOR */
+.insurance-calculator {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 3rem;
+}
+
+.calculator-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    color: var(--gray);
+}
+
+.form-group input, .form-group select {
+    padding: 0.8rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    color: var(--light);
+}
+
+.btn-calculate {
+    background: var(--gold);
+    color: var(--dark);
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    align-self: flex-end;
+}
+
+.calculation-result {
+    background: rgba(76, 175, 80, 0.1);
+    padding: 1.5rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+}
+
+/* SUPPORT PAGE */
+.support-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.support-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 420px;
+    margin: 0.6rem auto;
+}
+
+.support-icon {
+    font-size: 2.2rem;
+    margin-bottom: 0.6rem;
+}
+
+.support-phone, .support-email {
+    font-size: 1.2rem;
+    color: var(--gold);
+    margin: 0.5rem 0;
+}
+
+.support-hours {
+    color: var(--gray);
+    margin: 0.5rem 0;
+}
+
+.btn-support {
+    background: var(--gold);
+    color: var(--dark);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 0.6rem;
+    display: inline-block;
+    width: auto;
+    font-weight: 700;
+}
+
+/* Keep button full-width on very small screens for easier tapping */
+@media (max-width: 480px) {
+    .btn-support { width: 100%; display: block; }
+}
+
+/* Button pulse animation for Send Email */
+.btn-support {
+    will-change: transform, box-shadow;
+    transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.btn-support:hover {
+    animation: btnPulse 1.4s ease-in-out infinite;
+    transform: translateY(-3px) scale(1.03);
+}
+
+@keyframes btnPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(201, 162, 77, 0.18);
+    }
+    50% {
+        box-shadow: 0 12px 30px rgba(201, 162, 77, 0.32);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(201, 162, 77, 0);
+    }
+}
+
+/* FAQ */
+.faq-section {
+    margin: 4rem 0;
+}
+
+.faq-item {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.faq-question {
+    width: 100%;
+    padding: 1rem 0;
+    background: none;
+    border: none;
+    color: var(--light);
+    text-align: left;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question:after {
+    content: '+';
+    font-size: 1.5rem;
+    color: var(--gold);
+}
+
+.faq-answer {
+    padding-bottom: 1rem;
+    display: none;
+}
+
+/* CONTACT FORM */
+.contact-form {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 3rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group textarea {
+    padding: 0.8rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    color: var(--light);
+    width: 100%;
+    resize: vertical;
+}
+
+.btn-submit {
+    background: var(--gold);
+    color: var(--dark);
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+/* FOOTER */
+.page-footer {
+    text-align: center;
+    padding: 2rem;
+    color: var(--gray);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 4rem;
+}
+
+.footer-note {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    opacity: 0.7;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-right {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .nav-right a {
+        margin: 0;
+    }
+    
+    .page {
+        padding: 2rem 1rem;
+    }
+    
+    .page-container {
+        padding: 0 1rem;
+    }
+    
+    .insurance-plans {
+        grid-template-columns: 1fr;
+    }
+    
+    .plan-recommended {
+        transform: none;
+    }
+}
+
+/* HIDDEN UTILITY */
+.hidden {
+    display: none;
+}

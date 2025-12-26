@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Help & Support - Brinks Global Services</title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="apple-touch-icon" href="assets/logo.png">
+    <link rel="icon" sizes="32x32" href="assets/logo.png">
+    <link rel="icon" sizes="16x16" href="assets/logo.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/pages.css" />
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <!-- In all HTML files, update the navbar section -->
+<header class="navbar">
+    <div class="nav-left">
+        <img src="assets/logo.png" alt="Brand Logo" class="logo">
+        <span class="brand-name">BRINKS GLOBAL SERVICES</span>
+    </div>
+
+    
+    <nav class="nav-right" id="navMenu">
+        <a href="index.html">Track Shipment</a>
+        <a href="about.html">About</a>
+        <a href="support.html">Help & Support</a>
+    </nav>
+</header>
+
+    <!-- MAIN CONTENT -->
+    <main class="page fade-in">
+        <div class="page-container">
+            <h1>Help & Support</h1>
+            <p class="page-subtitle"></p>
+
+            
+
+                
+
+                <div class="support-card">
+                    <div class="support-icon">📧</div>
+                    <h3>Email Support</h3>
+                    <p>Send us a message</p>
+                    <p class="support-email">info@argentorsafe.net</p>
+                    <button class="btn-support" onclick="window.location.href='mailto:info@argentorsafe.net'">Send Email</button>
+                </div>
+            </div>
+
+            <div class="faq-section">
+                <h2>Frequently Asked Questions</h2>
+                
+                <div class="faq-item">
+                    <button class="faq-question">How do I track my shipment?</button>
+                    <div class="faq-answer">
+                        <p>Enter your tracking token on the Track Shipment page. Tokens are provided when your shipment is booked. If you've lost your token, contact support with your booking reference.</p>
+                    </div>
+                </div>
+
+                
+
+                <div class="faq-item">
+                    <button class="faq-question">How long does delivery take?</button>
+                    <div class="faq-answer">
+                        <p>International jewelry shipments typically take 7-21 days, depending on destination and customs clearance. Domestic shipments are 3-5 business days.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Can I change the delivery address?</button>
+                    <div class="faq-answer">
+                        <p>Address changes can be made before dispatch. Contact support immediately if your shipment is already in transit. Additional fees may apply.</p>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="page-footer">
+        <p>© 2025 Brinks Global Services. All rights reserved.</p>
+        <p class="footer-note">Help and Support available 24/7. Response time for email: within 4 business hours.</p>
+    </footer>
+
+    <script>
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                const isOpen = answer.style.display === 'block';
+                
+                // Close all other FAQs
+                document.querySelectorAll('.faq-answer').forEach(a => {
+                    a.style.display = 'none';
+                });
+                
+                // Toggle current FAQ
+                answer.style.display = isOpen ? 'none' : 'block';
+            });
+        });
+
+        
+    </script>
+
+</body>
+</html>
