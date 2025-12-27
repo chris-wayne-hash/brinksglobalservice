@@ -40,7 +40,7 @@
     <p>Enter your secure tracking token below.</p>
 
     <div class="token-input-group">
-        <input type="text" id="tokenInput" placeholder="Enter tracking token" />
+        <input type="password" id="tokenInput" placeholder="Enter tracking token" />
         <button id="validateBtn">Validate Token</button>
     </div>
 
@@ -59,12 +59,10 @@
         <div class="roadmap-line"></div>
         
         <div class="roadmap-nodes-wrapper">
-            <!-- Only 3 Roadmap Nodes -->
-            <div class="roadmap-node" data-status="processed">
-                <div class="node-circle">
-                    <div class="node-pulse"></div>
-                </div>
-                <div class="node-label">Processed</div>
+            <!-- Origin Wrap -->
+            <div class="roadmap-wrap origin-wrap">
+                <div class="wrap-label">ORIGIN</div>
+                <div class="wrap-location">Antwerp, Belgium</div>
             </div>
             
             <div class="roadmap-node" data-status="in-transit">
@@ -74,11 +72,10 @@
                 <div class="node-label">In Transit</div>
             </div>
             
-            <div class="roadmap-node" data-status="delivered">
-                <div class="node-circle">
-                    <div class="node-pulse"></div>
-                </div>
-                <div class="node-label">Delivered</div>
+            <!-- Destination Wrap -->
+            <div class="roadmap-wrap destination-wrap">
+                <div class="wrap-label">TRANSSHIPMENT</div>
+                <div class="wrap-location">Rotterdam, Germany</div>
             </div>
         </div>
     </div>
@@ -90,11 +87,11 @@
             <p class="current-status" id="currentStatus">Validating...</p>
         </div>
         <div class="info-card">
-            <h3>Sending From</h3>
+            <h3>ORIGIN</h3>
             <p class="route-from">Antwerp, Belgium</p>
             <br>
-            <h3>Destination</h3>
-            <p class="route-to">Rochelle, Illinois, USA</p>
+            <h3>TRANSSHIPMENT</h3>
+            <p class="route-to">Rotterdam, Germany</p>
         </div>
         <div class="info-card">
             <h3>Security Level</h3>
@@ -120,6 +117,10 @@
 
     <!-- TOAST NOTIFICATION -->
     <div id="toast" class="toast">Shipment status updated</div>
+
+
+    <!--Pixie dust container -->
+    <div id="pixie-dust-container"></div>
 
     <!-- JS -->
     <script src="js/script.js"></script>
